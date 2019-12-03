@@ -1,0 +1,26 @@
+{
+  "name": "easel-js",
+  "version": "0.1.0",
+  "description": "Utilities to shortcut starting and controlling canvas projects.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "watch": "npx tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdous/easel-js.git"
+  },
+  "author": "Tom Dancer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdous/easel-js/issues"
+  },
+  "homepage": "https://github.com/tdous/easel-js#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack-stream": "^5.2.1"
+  }
+}
