@@ -19,17 +19,17 @@ export class Easel implements CanvasInterface {
   bindTo(id: string) {
     this.cv = <HTMLCanvasElement>document.getElementById(id);
     this.cx = this.cv.getContext('2d')!;
+    this.setupCanvas();
+    return this;
+  }
+
+  setupCanvas() {
     const compStyle = window.getComputedStyle(this.cv);
     this.cv.setAttribute('width', compStyle.width!);
     this.cv.setAttribute('height', compStyle.height!);
     this.w = parseInt(compStyle.width!);
     this.h = parseInt(compStyle.height!);
     this.rt = this.cv.getBoundingClientRect();
-    return this;
-  }
-
-  wipe() {
-    this.cx.clearRect(0, 0, this.w, this.h);
   }
 
   drawLine(points: number[][], opts?: DrawOpts): void {
@@ -61,5 +61,9 @@ export class Easel implements CanvasInterface {
 
   saveState() {
     this.cx.save();
+  }
+  
+  wipe() {
+    this.cx.clearRect(0, 0, this.w, this.h);
   }
 }
