@@ -1,6 +1,6 @@
 {
   "name": "easel-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Utilities to shortcut starting and controlling canvas projects.",
   "main": "lib/index.js",
   "scripts": {
@@ -18,9 +18,6 @@
   },
   "homepage": "https://github.com/tdous/easel-js#readme",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.2",
-    "webpack-stream": "^5.2.1"
+    "typescript": "^3.7.2"
   }
 }
