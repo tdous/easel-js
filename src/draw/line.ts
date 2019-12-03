@@ -5,9 +5,9 @@ export interface LineInterface {
 }
 
 export const line: LineInterface = (
-  cx: CanvasRenderingContext2D,
-  points: number[][],
-  opts: DrawOpts = {}
+  cx,
+  points,
+  opts = {}
 ): void => {
   const {
     closed,

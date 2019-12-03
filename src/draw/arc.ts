@@ -46,6 +46,7 @@ export const arc: ArcInterface = (
 
   cx.beginPath();
   cx.arc(x, y, radius, angleFrom, angleTo, antiClockwise);
+
   if (fill) {
     cx.fill();
   }

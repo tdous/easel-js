@@ -1,4 +1,4 @@
-import { arc, line } from './../draw';
+import { arc, line, rect } from './../draw';
 import { DrawOpts } from './../defs/DrawOpts';
 
 interface CanvasInterface {
@@ -15,7 +15,7 @@ export class Easel implements CanvasInterface {
   cv!: HTMLCanvasElement;
   cx!: CanvasRenderingContext2D;
   rt!: ClientRect;
-  
+
   bindTo(id: string) {
     this.cv = <HTMLCanvasElement>document.getElementById(id);
     this.cx = this.cv.getContext('2d')!;
@@ -55,6 +55,10 @@ export class Easel implements CanvasInterface {
     arc(this.cx, x, y, radius, 0, Math.PI * 2, opts);
   }
 
+  drawRect(x: number, y: number, w: number, h: number, opts?: DrawOpts): void {
+    rect(this.cx, x, y, w, h, opts);
+  }
+
   restoreState() {
     this.cx.restore();
   }
@@ -62,7 +66,7 @@ export class Easel implements CanvasInterface {
   saveState() {
     this.cx.save();
   }
-  
+
   wipe() {
     this.cx.clearRect(0, 0, this.w, this.h);
   }

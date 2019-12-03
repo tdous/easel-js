@@ -18,6 +18,7 @@ export declare class Easel implements CanvasInterface {
     drawShape(points: number[][], opts?: DrawOpts): void;
     drawArc(x: number, y: number, radius: number, angleFrom: number, angleTo: number, opts?: DrawOpts): void;
     drawCircle(x: number, y: number, radius: number, opts?: DrawOpts): void;
+    drawRect(x: number, y: number, w: number, h: number, opts?: DrawOpts): void;
     restoreState(): void;
     saveState(): void;
     wipe(): void;
