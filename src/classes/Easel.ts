@@ -4,15 +4,18 @@ import { DrawOpts } from './../defs/DrawOpts';
 interface CanvasInterface {
   cv: HTMLCanvasElement | null;
   cx: CanvasRenderingContext2D | null;
+  h: number | null;
+  w: number | null;
+  rt: ClientRect | null;
 }
 
 export class Easel implements CanvasInterface {
-  private rt!: ClientRect;
-  private h!: number;
-  private w!: number;
+  h!: number;
+  w!: number;
   cv!: HTMLCanvasElement;
   cx!: CanvasRenderingContext2D;
-
+  rt!: ClientRect;
+  
   bindTo(id: string) {
     this.cv = <HTMLCanvasElement>document.getElementById(id);
     this.cx = this.cv.getContext('2d')!;
