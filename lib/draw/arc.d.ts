@@ -1,9 +1,6 @@
-import { DrawOpts } from './../defs/DrawOpts';
-declare type ArcOpts = {
-    antiClockwise?: boolean;
-};
-export interface ArcInterface {
-    (cx: CanvasRenderingContext2D, x: number, y: number, radius: number, angleFrom: number, angleTo: number, opts?: DrawOpts & ArcOpts): void;
+import { ModeStrs } from './mode';
+interface ArcInterface {
+    (cx: CanvasRenderingContext2D, x: number, y: number, radius: number, radFrom: number, radTo: number, mode: ModeStrs, antiClockwise: boolean): void;
 }
 export declare const arc: ArcInterface;
 export {};

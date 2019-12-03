@@ -1,0 +1,37 @@
+
+  // drawLine(points: number[][], opts?: DrawOpts): void {
+  //   line(this.cx, points, opts);
+  // }
+
+  // drawShape(points: number[][], opts?: DrawOpts): void {
+  //   line(this.cx, points, { ...opts, closed: true });
+  // }
+
+  // drawArc(
+  //   x: number,
+  //   y: number,
+  //   radius: number,
+  //   angleFrom: number,
+  //   angleTo: number,
+  //   opts?: DrawOpts
+  // ): void {
+  //   arc(this.cx, x, y, radius, angleFrom, angleTo, opts);
+  // }
+
+  // drawCircle(x: number, y: number, radius: number, opts?: DrawOpts): void {
+  //   arc(this.cx, x, y, radius, 0, Math.PI * 2, opts);
+  // }
+
+  // drawRect(x: number, y: number, w: number, h: number, opts?: DrawOpts): void {
+  //   rect(this.cx, x, y, w, h, { ...opts, stroke: true });
+  // }
+
+  // drawFillRect(
+  //   x: number,
+  //   y: number,
+  //   w: number,
+  //   h: number,
+  //   opts?: DrawOpts
+  // ): void {
+  //   rect(this.cx, x, y, w, h, { ...opts, fill: true });
+  // }

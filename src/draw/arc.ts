@@ -1,18 +1,15 @@
-import { DrawOpts } from './../defs/DrawOpts';
+import { ModeStrs, drawWithMode } from './mode';
 
-type ArcOpts = {
-  antiClockwise?: boolean;
-};
-
-export interface ArcInterface {
+interface ArcInterface {
   (
     cx: CanvasRenderingContext2D,
     x: number,
     y: number,
     radius: number,
-    angleFrom: number,
-    angleTo: number,
-    opts?: DrawOpts & ArcOpts
+    radFrom: number,
+    radTo: number,
+    mode: ModeStrs,
+    antiClockwise: boolean
   ): void;
 }
 
@@ -21,36 +18,12 @@ export const arc: ArcInterface = (
   x,
   y,
   radius,
-  angleFrom,
-  angleTo,
-  opts = {}
+  radFrom,
+  radTo,
+  mode,
+  antiClockwise = false
 ): void => {
-  const {
-    antiClockwise = false,
-    fill,
-    fillStyle,
-    lineWidth,
-    stroke = true,
-    strokeStyle
-  } = opts;
-
-  if (fillStyle) {
-    cx.fillStyle = fillStyle;
-  }
-  if (lineWidth) {
-    cx.lineWidth = lineWidth;
-  }
-  if (strokeStyle) {
-    cx.strokeStyle = strokeStyle;
-  }
-
   cx.beginPath();
-  cx.arc(x, y, radius, angleFrom, angleTo, antiClockwise);
-
-  if (fill) {
-    cx.fill();
-  }
-  if (stroke) {
-    cx.stroke();
-  }
+  cx.arc(x, y, radius, radFrom, radTo, antiClockwise);
+  drawWithMode(cx, mode);
 };

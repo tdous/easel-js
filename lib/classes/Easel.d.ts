@@ -1,4 +1,3 @@
-import { DrawOpts } from './../defs/DrawOpts';
 interface CanvasInterface {
     cv: HTMLCanvasElement | null;
     cx: CanvasRenderingContext2D | null;
@@ -12,15 +11,9 @@ export declare class Easel implements CanvasInterface {
     cv: HTMLCanvasElement;
     cx: CanvasRenderingContext2D;
     rt: ClientRect;
+    constructor(id: string);
     bindTo(id: string): this;
     setupCanvas(): void;
-    drawLine(points: number[][], opts?: DrawOpts): void;
-    drawShape(points: number[][], opts?: DrawOpts): void;
-    drawArc(x: number, y: number, radius: number, angleFrom: number, angleTo: number, opts?: DrawOpts): void;
-    drawCircle(x: number, y: number, radius: number, opts?: DrawOpts): void;
-    drawRect(x: number, y: number, w: number, h: number, opts?: DrawOpts): void;
-    restoreState(): void;
-    saveState(): void;
     wipe(): void;
 }
 export {};
