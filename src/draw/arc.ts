@@ -9,7 +9,7 @@ interface ArcInterface {
     radFrom: number,
     radTo: number,
     mode: ModeStrs,
-    antiClockwise: boolean
+    antiClockwise?: boolean
   ): void;
 }
 
