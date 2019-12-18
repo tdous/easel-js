@@ -1,6 +1,6 @@
 {
   "name": "easel-js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Utilities to shortcut starting and controlling canvas projects.",
   "main": "lib/index.js",
   "scripts": {
